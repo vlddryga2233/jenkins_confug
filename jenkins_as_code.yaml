@@ -4,13 +4,15 @@ jenkins:
    authorizationStrategy:
        loggedInUsersCanDoAnything:
          allowAnonymousRead: false
-       roleBased:
+        roleBased:
         roles:
           global:
             - name: "poweruser"
               description: "Jenkins administrators"
               permissions:
-                - "Overall/Administer"
+               - "Job/Configure"
+               - "Job/Build"
+               - "Job/Delete"
               assignments:
                 - "poweruser"
           items: 
